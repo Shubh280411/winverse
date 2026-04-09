@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinVerse | The Official Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #010409; color: #e2e8f0; overflow-x: hidden; }
+        .glass { background: rgba(13, 17, 23, 0.85); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.08); }
+        .cta-gradient { background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%); transition: 0.4s; }
+        .cta-gradient:hover { transform: scale(1.02); filter: brightness(1.2); }
+        
+        @keyframes neonPulse {
+            0%, 100% { filter: drop-shadow(0 0 5px #3b82f6) brightness(1); opacity: 1; }
+            50% { filter: drop-shadow(0 0 15px #3b82f6) brightness(1.3); opacity: 0.8; }
+        }
+        .logo-blink { animation: neonPulse 2s infinite ease-in-out; }
+
+        .dropdown-content { display: none; position: absolute; right: 0; top: 100%; width: 220px; border-radius: 24px; padding: 10px; z-index: 50; }
+        .group:hover .dropdown-content { display: block; animation: fadeInUp 0.3s ease; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        #tradingview_widget { height: 380px; border-radius: 20px; overflow: hidden; }
+        @media (min-width: 768px) { #tradingview_widget { height: 550px; } }
+        .roadmap-line { position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #2563eb, #9333ea); }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <nav class="glass fixed top-0 w-full z-[100] border-b border-white/5 px-4 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-lg font-black italic tracking-tighter text-white uppercase">WIN<span class="text-blue-500">VERSE</span></div>
+            
+            <div class="flex items-center gap-2 md:gap-4">
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white py-2">
+                        Tools <i data-lucide="chevron-down" size="12"></i>
+                    </button>
+                    <div class="dropdown-content glass border border-white/10 shadow-3xl mt-1">
+                        <a href="Coinverse_whitepaper_20260319.pdf" download class="flex items-center gap-3 p-4 hover:bg-white/5 rounded-xl text-[10px] font-bold uppercase border-b border-white/5">
+                            <i data-lucide="file-text" size="14" class="text-blue-500"></i> Whitepaper
+                        </a>
+                        <a href="usdW_whitepaper_20260319.pdf" download class="flex items-center gap-3 p-4 hover:bg-white/5 rounded-xl text-[10px] font-bold uppercase border-b border-white/5">
+                            <i data-lucide="coins" size="14" class="text-purple-500"></i> usdW Protocol
+                        </a>
+                        <a href="Coinverse_Pitchdeck.pdf" download class="flex items-center gap-3 p-4 hover:bg-white/5 rounded-xl text-[10px] font-bold uppercase">
+                            <i data-lucide="presentation" size="14" class="text-pink-500"></i> Pitchdeck
+                        </a>
+                    </div>
+                </div>
+                <a href="https://coinverse.io/signup?ref=REFRMCEOD" class="cta-gradient px-4 py-2 rounded-xl font-black text-[9px] md:text-[10px] tracking-widest uppercase text-white">JOIN NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center px-6 pt-24">
+        <div class="max-w-7xl mx-auto text-center lg:text-left grid lg:grid-cols-2 gap-10 items-center">
+            <div data-aos="fade-up">
+                <div class="flex flex-col items-center lg:items-start mb-6">
+                    <img src="coinverse-logo.png" class="w-16 h-16 md:w-24 md:h-24 logo-blink mb-6" alt="Logo">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[9px] md:text-[10px] font-black uppercase tracking-widest italic">
+                        Official Ecosystem Partner
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-8xl font-black mb-6 leading-[1.1] text-white italic tracking-tighter uppercase">
+                    TRADE THE <br><span class="text-blue-600">UNFOLDING.</span>
+                </h1>
+                
+                <p class="text-slate-500 text-sm md:text-lg mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                    Why settle for long waits? Experience Coinverse's continuous prediction model with hourly settlements and 10% loss rebate protection.
+                </p>
+
+                <a href="https://coinverse.io/signup?ref=REFRMCEOD" class="cta-gradient block md:inline-block px-10 py-5 rounded-2xl font-black text-lg md:text-xl text-white shadow-2xl">GET STARTED</a>
+            </div>
+            
+            <div data-aos="zoom-in" class="relative mt-8 lg:mt-0">
+                <img src="coinverse-terminal-pro.jpg" class="rounded-[30px] border border-white/10 shadow-3xl w-full" alt="Terminal">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6" data-aos="fade-up">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white italic uppercase tracking-tighter">Why Coinverse?</h2>
+                <p class="text-slate-500 text-sm mt-4 max-w-2xl mx-auto">Standard markets are slow and risky. Coinverse is built for the high-velocity trader who demands instant results and downside protection.</p>
+            </div>
+
+            <div class="grid gap-4 md:gap-6 max-w-3xl mx-auto">
+                <div class="glass p-6 rounded-[28px] flex justify-between items-center border-l-4 border-slate-700">
+                    <div class="text-left">
+                        <span class="text-[9px] text-slate-500 uppercase font-black">Others</span>
+                        <p class="text-white text-xs md:text-sm font-bold">Weeks/Months Waiting</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[9px] text-blue-500 uppercase font-black">Coinverse</span>
+                        <p class="text-blue-400 text-xs md:text-sm font-black italic">Hourly Settlements</p>
+                    </div>
+                </div>
+                <div class="glass p-6 rounded-[28px] flex justify-between items-center border-l-4 border-blue-600 shadow-xl shadow-blue-500/5">
+                    <div class="text-left">
+                        <span class="text-[9px] text-slate-500 uppercase font-black">Others</span>
+                        <p class="text-white text-xs md:text-sm font-bold">100% Capital Risk</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[9px] text-blue-500 uppercase font-black">Coinverse</span>
+                        <p class="text-blue-400 text-xs md:text-sm font-black italic">10% loss protection</p>
+                    </div>
+                </div>
+                <div class="glass p-6 rounded-[28px] flex justify-between items-center border-l-4 border-purple-600">
+                    <div class="text-left">
+                        <span class="text-[9px] text-slate-500 uppercase font-black">Others</span>
+                        <p class="text-white text-xs md:text-sm font-bold">Limited Assets</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[9px] text-blue-500 uppercase font-black">Coinverse</span>
+                        <p class="text-blue-400 text-xs md:text-sm font-black italic">Global Asset Hub</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-[#020617]/50" data-aos="fade-up">
+        <div class="max-w-xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-white italic uppercase tracking-tighter">Reward Track</h2>
+                <p class="text-blue-500 text-[10px] font-bold uppercase tracking-widest mt-2">Claim 100 usdW Bonus</p>
+            </div>
+
+            <div class="relative space-y-12 pl-12">
+                <div class="roadmap-line"></div>
+                <div class="relative">
+                    <div class="absolute -left-[52px] top-0 w-10 h-10 rounded-full bg-[#010409] border-2 border-blue-600 flex items-center justify-center z-10 shadow-lg shadow-blue-600/20">
+                        <span class="text-white font-black text-xs uppercase">25</span>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-l-4 border-blue-600">
+                        <h4 class="text-white font-black text-lg uppercase italic">Instant Signup</h4>
+                        <p class="text-slate-500 text-xs mt-2">Register via WinVerse to lock in your base reward.</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[52px] top-0 w-10 h-10 rounded-full bg-[#010409] border-2 border-pink-600 flex items-center justify-center z-10">
+                        <span class="text-white font-black text-xs uppercase">25</span>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-l-4 border-pink-600">
+                        <h4 class="text-white font-black text-lg uppercase italic">Social Check</h4>
+                        <p class="text-slate-500 text-xs mt-2">Follow our handles to verify your participation.</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[52px] top-0 w-10 h-10 rounded-full bg-[#010409] border-2 border-purple-600 flex items-center justify-center z-10">
+                        <span class="text-white font-black text-xs uppercase">50</span>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-l-4 border-purple-600">
+                        <h4 class="text-white font-black text-lg uppercase italic">Live Prediction</h4>
+                        <p class="text-slate-500 text-xs mt-2">Complete your first trade to unlock full 100 usdW.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="terminal" class="py-20 px-6" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-black italic text-white uppercase mb-10">Live Market Hub</h2>
+            <div class="flex justify-center bg-white/5 p-1 rounded-2xl border border-white/10 w-fit mx-auto mb-8">
+                <button onclick="changeChart('BTC')" class="bg-blue-600 px-8 py-2 rounded-xl text-[10px] font-black uppercase text-white shadow-lg">BTC</button>
+                <button onclick="changeChart('GOLD')" class="px-8 py-2 rounded-xl text-[10px] font-black uppercase text-slate-400">GOLD</button>
+            </div>
+            <div id="tradingview_widget" class="glass border border-blue-600/30"></div>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 border-t border-white/5 bg-[#010409]">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-10 flex flex-col items-center opacity-40">
+                <img src="coinverse-logo.png" class="w-8 h-8 mb-4 grayscale" alt="Logo">
+                <span class="text-xl font-black italic text-white uppercase tracking-[0.3em]">WINVERSE</span>
+            </div>
+
+            <div class="flex justify-center items-center gap-10 mb-10 text-slate-500">
+                <div class="hover:text-blue-400 transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </div>
+                <div class="hover:text-white transition-colors">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                </div>
+                <div class="hover:text-pink-500 transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </div>
+                <div class="hover:text-red-500 transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.71.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
+                </div>
+            </div>
+
+            <p class="text-[9px] font-bold text-slate-800 tracking-[0.5em] uppercase">Partner Portal • Coinverse Ecosystem 2026</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 1000, once: true });
+        function changeChart(asset) {
+            new TradingView.widget({
+                "autosize": true, "symbol": asset === 'BTC' ? "BINANCE:BTCUSDT" : "TVC:GOLD",
+                "interval": "H", "theme": "dark", "container_id": "tradingview_widget"
+            });
+        }
+        changeChart('BTC');
+    </script>
+</body>
+</html>
